@@ -10,14 +10,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "GitHub.copilot",
-        "ms-vscode.makefile-tools"
+        "GitHub.copilot"
       ]
     }
   },
-  "postCreateCommand": "echo 'Codespace ready! Node, npm, codex-cli, and firecrawl-cli are pre-installed.'",
-  "remoteUser": "node",
-  "mounts": [
-    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,readonly"
-  ]
+  "postCreateCommand": "echo 'Codespace ready! Node, npm, and firecrawl-cli are available.'",
+  "remoteUser": "node"
 }
