@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
     python3 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install firecrawl-cli via npm
-RUN npm install -g firecrawl-cli
+# Install both OpenAI Codex CLI and Firecrawl CLI
+RUN npm install -g @openai/codex firecrawl-cli
 
 # Set working directory
 WORKDIR /workspaces
