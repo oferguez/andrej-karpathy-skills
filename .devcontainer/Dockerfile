@@ -4,13 +4,14 @@ FROM mcr.microsoft.com/devcontainers/javascript-node:20
 RUN apt-get update && apt-get install -y \
     git \
     curl \
+    python3 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install codex-cli and firecrawl-cli globally
-RUN npm install -g codex-cli firecrawl-cli
+# Install firecrawl-cli via npm
+RUN npm install -g firecrawl-cli
 
 # Set working directory
 WORKDIR /workspaces
 
 # Verify installations
-RUN node --version && npm --version && codex-cli --version
+RUN node --version && npm --version
